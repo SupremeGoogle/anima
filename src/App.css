@@ -1,0 +1,54 @@
+/* App-specific styles */
+
+/* Smooth section transitions */
+section {
+  position: relative;
+}
+
+/* Button hover effects */
+button {
+  transition: all 0.3s ease;
+}
+
+/* Image loading placeholder */
+img {
+  background: linear-gradient(135deg, #F5F0E8 0%, #E8E0D5 100%);
+}
+
+/* Focus styles */
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid #C75B39;
+  outline-offset: 2px;
+}
+
+/* Selection color */
+::selection {
+  background: #C75B39;
+  color: white;
+}
+
+/* Prevent text selection on interactive elements */
+button,
+[role="button"] {
+  user-select: none;
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .font-script {
+    font-size: 0.9em;
+  }
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
